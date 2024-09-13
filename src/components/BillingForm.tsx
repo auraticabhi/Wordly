@@ -53,7 +53,7 @@ const BillingForm = ({
             <CardTitle>Subscription Plan</CardTitle>
             <CardDescription>
               You are currently on the{' '}
-              <strong>{subscriptionPlan.name}</strong> plan.
+              <strong>{subscriptionPlan.name||"Free"}</strong> plan.
             </CardDescription>
           </CardHeader>
 
@@ -71,7 +71,7 @@ const BillingForm = ({
               <p className='rounded-full text-xs font-medium'>
                 {subscriptionPlan.isCanceled
                   ? 'Your plan will be canceled on '
-                  : 'Your plan renews on'}
+                  : 'Your plan renews on '}
                 {format(
                   subscriptionPlan.stripeCurrentPeriodEnd!,
                   'dd.MM.yyyy'

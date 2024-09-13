@@ -97,8 +97,6 @@ const onUploadComplete = async ({
         
     const pineconeIndex = pc.Index('quickstart')
 
-    console.log("Here: ", pineconeIndex);
-
     const embeddings = new OpenAIEmbeddings({
       openAIApiKey: process.env.OPENAI_API_KEY,
     })
